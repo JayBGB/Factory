@@ -11,7 +11,7 @@ public class Main{
         String tipo = null;
         Integer nTipo = null;
 
-        int numero = Integer.parseInt(JOptionPane.showInputDialog("Como quieres que te lo entregen:\n1->Camion\n2->Bicicleta"));
+        int numero = Integer.parseInt(JOptionPane.showInputDialog("Como quieres que te lo entregen:\n1->Camion\n2->Bicicleta\n3->Barco"));
         switch (numero){
             case 1:
                 obxT = Factoria.getProducto(1);
@@ -20,6 +20,11 @@ public class Main{
                 break;
             case 2:
                 obxT = Factoria.getProducto(2);
+                coste = obxT.costeTotal(Factoria.cp);
+                nTipo = obxT.tipoEmbalaje(Factoria.dimensionX,Factoria.dimensionY,Factoria.dimensionZ,Factoria.peso);
+                break;
+            case 3:
+                obxT = Factoria.getProducto(3);
                 coste = obxT.costeTotal(Factoria.cp);
                 nTipo = obxT.tipoEmbalaje(Factoria.dimensionX,Factoria.dimensionY,Factoria.dimensionZ,Factoria.peso);
                 break;

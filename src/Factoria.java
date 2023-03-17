@@ -1,3 +1,4 @@
+import com.jay.transportes.Barco;
 import com.jay.transportes.Camion;
 import com.jay.transportes.Bicicleta;
 import com.jay.transportes.ITransportes;
@@ -11,6 +12,8 @@ import javax.swing.*;
 public class Factoria {
     public static final int CAMION = 1;
     public static final int BICICLETA = 2;
+
+    public static final int BARCO = 3;
     public static Integer cp = null;
     public static Float dimensionX = null;
     public static Float dimensionY = null;
@@ -35,7 +38,10 @@ public class Factoria {
             // tipo ventana
             case BICICLETA:
                 return new Bicicleta(cp, dimensionX, dimensionY, dimensionZ, peso);
-            // otro tipo
+
+            case BARCO:
+                return new Barco(cp, dimensionX, dimensionY, dimensionZ, peso);
+
             default:
                 return null;
         }
