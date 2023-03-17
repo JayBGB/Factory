@@ -4,12 +4,21 @@ import javax.swing.*;
 
 public class Barco implements ITransportes{
 
+
     private Integer cp;
     private Float dimensionX;
     private Float dimensionY;
     private Float dimensionZ;
     private Float peso;
 
+    /**
+     *
+     * @param cp
+     * @param dimensionX
+     * @param dimensionY
+     * @param dimensionZ
+     * @param peso
+     */
     public Barco(Integer cp, Float dimensionX, Float dimensionY, Float dimensionZ, Float peso) {
         this.cp = cp;
         this.dimensionX = dimensionX;
@@ -18,6 +27,11 @@ public class Barco implements ITransportes{
         this.peso = peso;
     }
 
+    /**
+     *
+     * @param cp -> dar un Codigo Postal
+     * @return
+     */
     public Float costeTotal(Integer cp) {
         while (cp > 37000 || cp < 36000){
             cp = Integer.parseInt(JOptionPane.showInputDialog("A este codigo postal non chegamos, ten que ser maior que 36000 e menor que 37000"));
@@ -37,6 +51,14 @@ public class Barco implements ITransportes{
         return precio;
     }
 
+    /**
+     *
+     * @param dimensionX -> las dimensiones ancho
+     * @param dimensionY -> largo
+     * @param dimensionZ -> alto
+     * @param peso -> peso
+     * @return
+     */
     @Override
     public Integer tipoEmbalaje(Float dimensionX, Float dimensionY, Float dimensionZ, Float peso) {
         Integer numero = null;

@@ -25,6 +25,7 @@ public class Factoria {
      * @param msg string a imprimir
      * @return producto segun el tipo
      */
+
     public static ITransportes getProducto(int type) {
         cp = Integer.parseInt(JOptionPane.showInputDialog("Teclee tu CP"));
         dimensionX = Float.parseFloat(JOptionPane.showInputDialog("Teclee a dimensionX"));

@@ -6,10 +6,15 @@ public class Main{
 
     static ITransportes obxT;//es objeto, despues se iguala con un new NombreClase
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         Float coste = null;
         String tipo = null;
         Integer nTipo = null;
+
 
         int numero = Integer.parseInt(JOptionPane.showInputDialog("Como quieres que te lo entregen:\n1->Camion\n2->Bicicleta\n3->Barco"));
         switch (numero){
@@ -29,6 +34,7 @@ public class Main{
                 nTipo = obxT.tipoEmbalaje(Factoria.dimensionX,Factoria.dimensionY,Factoria.dimensionZ,Factoria.peso);
                 break;
         }
+
         if(nTipo==null && coste==null){
             System.out.println("Opcion incorrecta, saliendo del programa");
         }
